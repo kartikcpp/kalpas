@@ -134,6 +134,9 @@ app.delete(
 app.use("/error", (req, res) => {
   res.json({ msg: "not allowed" });
 });
+app.get('/',(req,res)=>{
+  res.send('Welcome')
+})
 //connecting to db
 mongoose.connect(process.env.MONGO_URL, () => {
   console.log("connected to db");
